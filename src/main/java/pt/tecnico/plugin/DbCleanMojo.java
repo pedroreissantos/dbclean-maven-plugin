@@ -32,7 +32,7 @@ public class DbCleanMojo extends AbstractMojo {
     protected String url;
 
     /** Database resource file.  */
-    @Parameter(property = "dbclean.resource", defaultValue = "fenix-framework-jvstm-ojb.properties")
+    @Parameter(property = "dbclean.resource", defaultValue = "fenix-framework.properties")
     protected String resource;
 
     /** Database name.  */
@@ -97,7 +97,8 @@ public class DbCleanMojo extends AbstractMojo {
 	  if (attr[0].equals("dbAlias")) {
 	    int i = attr[1].trim().lastIndexOf('/');
 	    int j = attr[1].trim().lastIndexOf('?');
-	    dbase = attr[1].trim().substring(i+1,j);
+	    if (j >= 0) dbase = attr[1].trim().substring(i+1,j);
+	    else dbase = attr[1].trim().substring(i+1);
 	  }
 	}
 	scanner.close();
