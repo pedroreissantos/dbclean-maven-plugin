@@ -1,18 +1,20 @@
 
-  Maven plugin to clean the application database tables.
+	Maven plugin to clean the application database tables.
 
-  compile: mvn install
+compile: mvn install
 
-  run: mvn pt.tecnico.plugin:dbclean-maven-plugin:1.0-SNAPSHOT:dbclean
+run: mvn pt.tecnico.plugin:dbclean-maven-plugin:1.0-SNAPSHOT:dbclean
 
-  to run as: mvn dbclean:dbclean
+to run as: mvn dbclean:dbclean
 
-  add to ~/.m2/settings.xml
+add to ~/.m2/settings.xml
 
-  <pluginGroups>
+	<pluginGroups>
 
-    <pluginGroup>pt.tecnico.plugin</pluginGroup>
+		<pluginGroup>pt.tecnico.plugin</pluginGroup>
 
-  </pluginGroups>
+	</pluginGroups>
 
-  (C) reis.santos(at)tecnico.ulisboa.pt 7feb2016
+if ~/.m2/settings.xml does not exist, copy ./seetings.xml to it.
+
+(C) reis.santos(at)tecnico.ulisboa.pt 24mar2017
